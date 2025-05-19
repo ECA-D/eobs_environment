@@ -5,8 +5,8 @@ geos=3.11.1
 mpi=1.0=openmpi
 r-data.table=1.15.2
 r-dosnow=1.0.20
+r-fields=15.2
 r-foreach=1.5.2
-r-fields
 r-geor=1.9_4
 r-ggdendro=0.2.0
 r-ggplot2=3.5.1

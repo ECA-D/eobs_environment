@@ -43,13 +43,14 @@ jobs:
         #   use-only-tar-bz2: true
           auto-update-conda: true
 
-      - name: create environment
-        run: |
-          echo "installing environment"
-          bash create_environment.sh
-
+      - name: install conda dependencies
+        run: bash install_step0_conda.sh
+      - name: install R dependencies
+        run: bash install_step1_R.sh
       - name: run_test
         run: bash run_minimal_test.sh
+      - name: conda list
+        run: conda list
 
       - name: "completed"
         run: echo 'All complete, successfull'
