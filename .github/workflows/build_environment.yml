@@ -1,0 +1,58 @@
+name: "Build environment"
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_env:
+    name: "Build ${{ matrix.os }}"
+    strategy:
+      fail-fast: False
+      matrix:
+        # When adding alternative OS, we also need an alternative for the installation of miniforge
+        os: ["ubuntu-latest"]
+    runs-on: "${{ matrix.os }}"
+    defaults:
+      run:
+        # This is needed otherwise we can't activate the conda installation
+        shell: bash -l {0}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      # Access needs to be granted later
+      #   - name: checkout development
+      #     uses: actions/checkout@v3
+      #     with:
+      #       repository: ECA-D/development
+      #       ssh-key: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      #       path: development
+      #       ref: master
+      #       fetch-depth: 0
+
+      - uses: conda-incubator/setup-miniconda@v3
+        if: matrix.os == 'ubuntu-latest'
+        with:
+
+          installer-url: https://github.com/conda-forge/miniforge/releases/download/25.3.0-3/Miniforge3-Linux-x86_64.sh
+          python-version: "3.11"
+          allow-softlinks: true
+          show-channel-urls: true
+          auto-update-conda: true
+
+      - name: install conda dependencies
+        run: bash install_step0_conda.sh
+      - name: install R dependencies
+        run: bash install_step1_R.sh
+      - name: run_test
+        run: bash run_minimal_test.sh
+      - name: conda list
+        run: conda list
+
+      - name: "completed"
+        run: echo 'All complete, successfull'
