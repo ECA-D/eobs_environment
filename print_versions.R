@@ -10,13 +10,12 @@ library(gstat)
 library(sp)
 
 # Imports for eobs
-import(LatticeKrig)
-import(data.table)
-import(fields)
-import(foreach)
-import(methods)
-import(rts)
-import(sp)
+library(LatticeKrig)
+library(data.table)
+library(fields)
+library(foreach)
+library(methods)
+library(rts)
 
 # Todo activate
 # library(eobs)
