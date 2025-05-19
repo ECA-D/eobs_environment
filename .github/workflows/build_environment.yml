@@ -50,6 +50,8 @@ jobs:
 
       - name: run_test
         run: bash run_minimal_test.sh
-
+      - name: conda list
+        run: conda list
+        
       - name: "completed"
         run: echo 'All complete, successfull'
