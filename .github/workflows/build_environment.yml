@@ -14,6 +14,7 @@ jobs:
     strategy:
       fail-fast: False
       matrix:
+        # When adding alternative OS, we also need an alternative for the installation of miniforge
         os: ["ubuntu-latest"]
     runs-on: "${{ matrix.os }}"
     defaults:
@@ -33,14 +34,15 @@ jobs:
       #       path: development
       #       ref: master
       #       fetch-depth: 0
+
       - uses: conda-incubator/setup-miniconda@v3
+        if: matrix.os == 'ubuntu-latest'
         with:
-          # installer-url: https://github.com/conda-forge/miniforge/releases/download/24.9.2-0/Miniforge3-24.9.2-0-Linux-x86_64.sh
+
           installer-url: https://github.com/conda-forge/miniforge/releases/download/25.3.0-3/Miniforge3-Linux-x86_64.sh
           python-version: "3.11"
           allow-softlinks: true
           show-channel-urls: true
-        #   use-only-tar-bz2: true
           auto-update-conda: true
 
       - name: install conda dependencies
