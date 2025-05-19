@@ -1,0 +1,8 @@
+print('Start')
+# library(eobs)  
+library(raster)
+library(yaml)
+library(doSNOW)
+library(RSQLite)
+library(maptools)
+sessionInfo()
