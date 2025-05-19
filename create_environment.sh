@@ -1,4 +1,5 @@
 #!/bin/bash
+conda install python=3.11.6
 conda install --file conda_env.txt -vvv
 
 Rscript -e "packageurl<-'https://cran.r-project.org/src/contrib/Archive/LatticeKrig/LatticeKrig_8.4.tar.gz'; install.packages(packageurl, repos=NULL, type='source')"
