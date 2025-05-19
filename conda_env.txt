@@ -2,6 +2,7 @@ automap
 cdo
 gdal
 openmpi
+python=3.11.6
 r-data.table
 r-dosnow=1.0.20
 r-foreach=1.5.2
@@ -10,6 +11,7 @@ r-ggdendro
 r-ggplot2
 r-gstat
 r-mgcv
+r-maptools
 r-ncdf4
 r-raster=3.5_21
 r-rcurl
