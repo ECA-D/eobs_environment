@@ -2,7 +2,6 @@ automap
 cdo
 gdal
 openmpi
-python=3.11.6
 r-data.table
 r-dosnow=1.0.20
 r-foreach=1.5.2
