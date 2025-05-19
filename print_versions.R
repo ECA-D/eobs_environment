@@ -8,5 +8,17 @@ library(snow)
 library(doMPI)
 library(gstat)
 library(sp)
+
+# Imports for eobs
+import(LatticeKrig)
+import(data.table)
+import(fields)
+import(foreach)
+import(methods)
+import(rts)
+import(sp)
+
+# Todo activate
 # library(eobs)
+
 sessionInfo()
