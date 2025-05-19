@@ -16,6 +16,10 @@ jobs:
       matrix:
         os: ["ubuntu-latest"]
     runs-on: "${{ matrix.os }}"
+    defaults:
+      run:
+        # This is needed otherwise we can't activate the conda installation
+        shell: bash -l {0}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -33,6 +37,7 @@ jobs:
         with:
           # installer-url: https://github.com/conda-forge/miniforge/releases/download/24.9.2-0/Miniforge3-24.9.2-0-Linux-x86_64.sh
           installer-url: https://github.com/conda-forge/miniforge/releases/download/25.3.0-3/Miniforge3-Linux-x86_64.sh
+          python-version: "3.11.6"
           allow-softlinks: true
           show-channel-urls: true
           use-only-tar-bz2: true
