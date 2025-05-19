@@ -16,7 +16,7 @@ r-ncdf4
 r-raster=3.5_21
 r-rcurl
 r-reshape
-r-rgdal
+r-rgdal=1.6_6
 r-rgeos=0.5_9
 r-rmpi
 r-rsqlite=2.2.18
