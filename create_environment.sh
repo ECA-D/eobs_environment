@@ -1,5 +1,5 @@
 #!/bin/bash
-conda env update --file conda_env.yml
+conda install --file conda_env.txt
 
 Rscript -e "packageurl<-'https://cran.r-project.org/src/contrib/Archive/LatticeKrig/LatticeKrig_8.4.tar.gz'; install.packages(packageurl, repos=NULL, type='source')"
 Rscript -e "install.packages('rts', repos='https://cran.rstudio.com')"
