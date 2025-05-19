@@ -3,27 +3,27 @@ name:
 channels:
   - conda-forge
 dependencies:
-- automap
-- cdo
-- gdal
-- openmpi
-- r-data.table
-- r-dosnow=1.0.20
-- r-foreach=1.5.2
-- r-geor
-- r-ggdendro
-- r-ggplot2
-- r-gstat
-- r-mgcv
-- r-ncdf4
-- r-raster=3.5_21
-- r-rcurl
-- r-reshape
-- r-rgdal
-- r-rgeos=0.5_9
-- r-rmpi
-- r-rsqlite=2.2.18
-- r-sp=1.5_0
-- r-spam=2.9_1
-- r-terra=1.5_21
-- r-yaml=2.3.5
+  - automap
+  - cdo
+  - gdal
+  - openmpi
+  - r-data.table
+  - r-dosnow=1.0.20
+  - r-foreach=1.5.2
+  - r-geor
+  - r-ggdendro
+  - r-ggplot2
+  - r-gstat
+  - r-mgcv
+  - r-ncdf4
+  - r-raster=3.5_21
+  - r-rcurl
+  - r-reshape
+  - r-rgdal
+  - r-rgeos=0.5_9
+  - r-rmpi
+  - r-rsqlite=2.2.18
+  - r-sp=1.5_0
+  - r-spam=2.9_1
+  - r-terra=1.5_21
+  - r-yaml=2.3.5
