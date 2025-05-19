@@ -40,7 +40,7 @@ jobs:
           python-version: "3.11"
           allow-softlinks: true
           show-channel-urls: true
-          use-only-tar-bz2: true
+        #   use-only-tar-bz2: true
           auto-update-conda: true
 
       - name: create environment
