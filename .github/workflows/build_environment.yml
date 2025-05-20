@@ -25,15 +25,15 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      # Access needs to be granted later
-      #   - name: checkout development
-      #     uses: actions/checkout@v3
-      #     with:
-      #       repository: ECA-D/development
-      #       ssh-key: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-      #       path: development
-      #       ref: master
-      #       fetch-depth: 0
+        # Access needs to be granted later
+        - name: checkout development
+          uses: actions/checkout@v3
+          with:
+            repository: ECA-D/development
+            ssh-key: ${{ secrets.development_secret_token }}
+            path: development
+            ref: main
+            fetch-depth: 0
 
       - uses: conda-incubator/setup-miniconda@v3
         if: matrix.os == 'ubuntu-latest'
