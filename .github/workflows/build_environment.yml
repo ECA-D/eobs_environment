@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: ECA-D/development
-          ssh-key: ${{ secrets.development_secret_token }}
+          ssh-key: ${{ secrets.DEVELOPMENT_SECRET_TOKEN }}
           path: development
           ref: main
           fetch-depth: 0
