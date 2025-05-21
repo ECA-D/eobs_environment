@@ -25,7 +25,7 @@ conda create -n eobs_r
 ```
 At the time of writing, we focused on python 3.11 for now, but alternative python versions might be supported in the future.
 
-### 3. Install requirements'
+### 3. Install requirements
 Finally install all the required libraries, which is a mix of `conda` and pure `R` libraries.
 ```bash
 git clone https://github.com/ECA-D/eobs_environment .
