@@ -28,6 +28,10 @@ jobs:
       # At 2025-05 a new token was added in the gitgub-action secrets. This token will expire ~05-2026.
       # When that happens, generate a new one following the documentation:
       # https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+      # More specifically:
+      #  - go to https://github.com/settings/personal-access-tokens
+      #  - create a (fine-grained) token for ECA-D/development
+      #  - the fine grained token should have  "Read access to metadata" and "Read and Write access to code"
       - name: checkout development repository
         uses: actions/checkout@v3
         with:
