@@ -31,7 +31,7 @@ jobs:
       # More specifically:
       #  - go to https://github.com/settings/personal-access-tokens
       #  - create a (fine-grained) token for ECA-D/development
-      #  - the fine grained token should have  "Read access to metadata" and "Read and Write access to code"
+      #  - the fine grained token should have "Read access to metadata" and "Read and Write access to code"
       - name: checkout development repository
         uses: actions/checkout@v3
         with:
