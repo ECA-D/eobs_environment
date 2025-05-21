@@ -36,7 +36,10 @@ jobs:
           path: development
           ref: main
           fetch-depth: 0
-
+      - name: Run development tests
+        run: |
+          which python
+          python development/test.py
       - uses: conda-incubator/setup-miniconda@v3
         if: matrix.os == 'ubuntu-latest'
         with:
