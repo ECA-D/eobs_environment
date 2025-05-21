@@ -26,9 +26,9 @@ jobs:
         uses: actions/checkout@v3
 
       # At 2025-05 a new token was added in the gitgub-action secrets. This token will expire ~05-2026.
-      # When that happens, generate a new one following the documentation: 
+      # When that happens, generate a new one following the documentation:
       # https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
-      - name: checkout development
+      - name: checkout development repository
         uses: actions/checkout@v3
         with:
           repository: ECA-D/development
@@ -36,10 +36,6 @@ jobs:
           path: development
           ref: main
           fetch-depth: 0
-      - name: Run development tests
-        run: |
-          which python
-          python development/test.py
       - uses: conda-incubator/setup-miniconda@v3
         if: matrix.os == 'ubuntu-latest'
         with:
@@ -56,8 +52,12 @@ jobs:
         run: bash install_step1_R.sh
       - name: run_test
         run: bash run_minimal_test.sh
-      - name: conda list
-        run: conda list
+      - name: Run development tests
+        run: |
+          which python
+          python development/test.py
 
+      - name: List full installation of the conda environment
+        run: conda list
       - name: "completed"
-        run: echo 'All complete, successfull'
+        run: echo 'All complete, successful'
