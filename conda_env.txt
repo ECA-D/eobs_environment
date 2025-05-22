@@ -25,3 +25,4 @@ r-spam=2.9_1
 r-terra=1.5_21
 r-yaml=2.3.5
 sqlite=3.46
+r-devtools
