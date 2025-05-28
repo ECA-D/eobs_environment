@@ -1,4 +1,7 @@
 # eobs_environment
+[![Build environment](https://github.com/ECA-D/eobs_environment/actions/workflows/build_environment.yml/badge.svg)](https://github.com/ECA-D/eobs_environment/actions/workflows/build_environment.yml)
+
+
 Software environment for running E-OBS code
 
 *This repository is in a testing phase*
