@@ -27,3 +27,4 @@ r-yaml=2.3.5
 sqlite=3.46
 r-lubridate
 r-rmysql
+r-fitdistrplus
