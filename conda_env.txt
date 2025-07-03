@@ -28,3 +28,4 @@ sqlite=3.46
 r-lubridate
 r-rmysql
 r-fitdistrplus
+r-lmomco
