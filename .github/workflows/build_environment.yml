@@ -38,7 +38,7 @@ jobs:
           repository: ECA-D/eobs
           token: ${{ secrets.DEVELOPMENT_SECRET_TOKEN }}
           path: eobs
-          ref: main
+          ref: master
           fetch-depth: 0
       - uses: conda-incubator/setup-miniconda@v3
         if: matrix.os == 'ubuntu-latest'
