@@ -61,7 +61,6 @@ jobs:
         run: |
           which python
           python development/test.py
-
       - name: List full installation of the conda environment
         run: conda list
       - name: "completed"
