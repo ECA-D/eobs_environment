@@ -37,7 +37,7 @@ jobs:
         with:
           repository: ECA-D/eobs
           token: ${{ secrets.DEVELOPMENT_SECRET_TOKEN }}
-          path: ../eobs
+          path: eobs
           ref: main
           fetch-depth: 0
       - uses: conda-incubator/setup-miniconda@v3
@@ -49,7 +49,8 @@ jobs:
           allow-softlinks: true
           show-channel-urls: true
           auto-update-conda: true
-
+      - name: Move eobs
+        run: mv eobs ../eobs
       - name: install conda dependencies
         run: bash install_step0_conda.sh
       - name: install R dependencies
