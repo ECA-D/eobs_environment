@@ -7,7 +7,7 @@ r-base=4.2.3
 r-data.table=1.15.2
 r-dosnow=1.0.20
 r-fields=15.2
-r-fitdistrplus1.1_11
+r-fitdistrplus=1.1_11
 r-foreach=1.5.2
 r-geor=1.9_4
 r-ggdendro=0.2.0
