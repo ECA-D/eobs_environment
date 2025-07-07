@@ -30,15 +30,15 @@ jobs:
       # https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
       # More specifically:
       #  - go to https://github.com/settings/personal-access-tokens
-      #  - create a (fine-grained) token for ECA-D/development
+      #  - create a (fine-grained) token for ECA-D/eobs
       #  - the fine grained token should have "Read access to metadata" and "Read and Write access to code"
-      - name: checkout development repository
+      - name: checkout eobs repository
         uses: actions/checkout@v3
         with:
-          repository: ECA-D/development
+          repository: ECA-D/eobs
           token: ${{ secrets.DEVELOPMENT_SECRET_TOKEN }}
-          path: development
-          ref: main
+          path: eobs
+          ref: master
           fetch-depth: 0
       - uses: conda-incubator/setup-miniconda@v3
         if: matrix.os == 'ubuntu-latest'
@@ -49,18 +49,14 @@ jobs:
           allow-softlinks: true
           show-channel-urls: true
           auto-update-conda: true
-
+      - name: Move eobs
+        run: mv eobs ../eobs
       - name: install conda dependencies
         run: bash install_step0_conda.sh
       - name: install R dependencies
         run: bash install_step1_R.sh
       - name: run_test
         run: bash run_minimal_test.sh
-      - name: Run development tests
-        run: |
-          which python
-          python development/test.py
-
       - name: List full installation of the conda environment
         run: conda list -e
       - name: "completed"
