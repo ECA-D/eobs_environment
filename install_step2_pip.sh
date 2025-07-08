@@ -1,1 +1,1 @@
-pip install netcdf4 h5netcdf xarray numpy dask
+pip install netcdf4 h5netcdf xarray numpy dask shapely pyproj rasterio geopandas
