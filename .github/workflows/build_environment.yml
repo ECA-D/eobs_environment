@@ -62,6 +62,6 @@ jobs:
           python development/test.py
 
       - name: List full installation of the conda environment
-        run: conda list
+        run: conda list -e
       - name: "completed"
         run: echo 'All complete, successful'
