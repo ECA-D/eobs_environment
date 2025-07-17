@@ -58,6 +58,6 @@ jobs:
       - name: run_test
         run: bash run_minimal_test.sh
       - name: List full installation of the conda environment
-        run: conda list
+        run: conda list -e
       - name: "completed"
         run: echo 'All complete, successful'
