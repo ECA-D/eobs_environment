@@ -19,5 +19,4 @@ library(rts)
 
 # EOBS
 library(eobs)
-library(eobs_no_exist)
 sessionInfo()
