@@ -17,7 +17,6 @@ library(foreach)
 library(methods)
 library(rts)
 
-# Todo activate
-# library(eobs)
-
+# EOBS
+library(eobs)
 sessionInfo()
