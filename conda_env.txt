@@ -3,7 +3,7 @@ cdo
 gdal
 geos
 mpi
-r-base=4.4.3
+r-base
 r-data.table
 r-dosnow
 r-fields
