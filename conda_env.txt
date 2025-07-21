@@ -26,7 +26,7 @@ r-rmpi
 r-rmysql
 r-rsqlite
 r-sf
-r-sp
+r-sp>2
 r-spam
 r-terra
 r-yaml
