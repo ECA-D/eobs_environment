@@ -3,7 +3,7 @@ cdo=2.1.0
 gdal=3.6.2
 geos=3.11.1
 mpi=1.0=openmpi
-r-base=4.2.3
+r-base=4.4.3
 r-data.table=1.15.2
 r-dosnow=1.0.20
 r-fields=15.2
