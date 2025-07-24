@@ -3,6 +3,7 @@ cdo
 gdal
 geos
 mpi
+proj
 r-base
 r-data.table
 r-dosnow
