@@ -55,6 +55,8 @@ jobs:
         run: bash install_step0_conda.sh
       - name: install R dependencies
         run: bash install_step1_R.sh
+      - name: install python dependencies
+        run: bash install_step2_pip.sh
       - name: run_test
         run: bash run_minimal_test.sh
       - name: List full installation of the conda environment
