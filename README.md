@@ -71,6 +71,4 @@ chmod -x $(which sed)
 
 # Check that the software was succesfully installed:
 bash run_miniml_test.sh
-
-
 ```
