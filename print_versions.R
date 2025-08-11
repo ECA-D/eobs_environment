@@ -8,6 +8,8 @@ library(snow)
 library(doMPI)
 library(gstat)
 library(sp)
+library(RandomFields)
+library(sf)
 
 # Imports for eobs
 library(LatticeKrig)
