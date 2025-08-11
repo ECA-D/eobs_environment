@@ -1,10 +1,11 @@
 """
-Only works on ATOS, to run:
+Only works on ATOS/ECMWF, to run:
 module load python3
 export TYKKY_PATH=$HPCPERM/tykky
-time python3 create_tykky_env.py -n eobs_v25.07
+time python3 create_tykky_env.py -n eobs_v25.08
 
-Installing with tykky on atos is a bit tricky, since conda-containerize changes paths during the installation, so we need to have absolute paths.
+Installing with tykky on atos is a bit tricky, since conda-containerize changes
+paths during the installation, so we need to have absolute paths.
 For that reason, we convert the conda-requirements to a yaml file.
 """
 
@@ -20,6 +21,7 @@ template = """
 module load tykky
 conda-containerize new --mamba --prefix {tykky_path}/{env_name} {yaml_file}
 conda-containerize update {tykky_path}/{env_name} --post-install {abs_path}/install_step1_R.sh
+conda-containerize update {tykky_path}/{env_name} --post-install {abs_path}/install_step2_pip.sh
 """
 yaml_template = """
 channels:
